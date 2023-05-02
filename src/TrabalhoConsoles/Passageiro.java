@@ -1,7 +1,5 @@
 package TrabalhoConsoles;
 
-import java.security.PublicKey;
-
 
 public class Passageiro extends Thread {
 
@@ -59,21 +57,27 @@ public class Passageiro extends Thread {
 	public void esperando_elevador() {
 		while (this.is_next==false || elevador.is_running==false){
 				try {
-					Thread.sleep(2000);
-					System.out.println(String.valueOf(this.threadId())+" is waiting");
+					Thread.sleep(20000);
+					System.out.println(String.valueOf(this.threadId())+" Está esperando o Elevador");
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 		}
 		try {
-			Thread.sleep(200);
+			Thread.sleep(20000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 		
+	private char[] threadId() {
+		
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	public void chamar_elevador() {
 		try {
 			elevador.sinal.acquire();

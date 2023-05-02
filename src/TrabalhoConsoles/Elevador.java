@@ -2,8 +2,6 @@ package TrabalhoConsoles;
 
 import java.util.*;
 import java.util.concurrent.Semaphore;
-import java.lang.Runnable;
-import java.util.concurrent.Semaphore;
 
 public class Elevador extends Thread {
 	

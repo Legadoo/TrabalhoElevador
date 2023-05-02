@@ -43,8 +43,8 @@ public class Predio {
 			
 		}
 		
-		List<Map.Entry<Passageiro, Integer> > list = 
-				new <Map.Entry<Passageiro, Integer> >(line_dict.entrySet());
+		List<Map.Entry<Passageiro, Integer> > list =
+	           new LinkedList<Map.Entry<Passageiro, Integer> >(line_dict.entrySet());
 		
 		Collections.sort(list, new Comparator<Map.Entry<Passageiro, Integer> >(){
 			public int compare(Map.Entry<Passageiro, Integer> o1,
@@ -67,7 +67,6 @@ public class Predio {
 	}
 	
 	private int fullest_floor() {
-		int current_size = this.Andares.get(this.elevador.current_floor).size();
 		int ret_val = 0;
 		int biggest_floor = 0;
 		int counter = 0;

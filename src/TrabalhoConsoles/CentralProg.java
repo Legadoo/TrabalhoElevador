@@ -1,7 +1,6 @@
 package TrabalhoConsoles;
 
 import java.util.*;
-import java.util.concurrent.Semaphore;
 
 
 public class CentralProg {
